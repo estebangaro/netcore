@@ -1,0 +1,39 @@
+.oculto{
+    display: none;
+}
+.visible{
+    display: block;
+}
+.fondoPopUp{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 255, 0.3);
+    width: 100%;
+    height: 100%;
+}
+.contenedorPopUp{
+    width: 600px;
+    height: 300px;
+    position: relative;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 10px;
+    top:50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -300px;
+}
+.shadow-1{
+    box-shadow: 5px 10px #888888;
+}
+.padding-1em{
+    padding: 1em;
+}
+.icono-cerrar{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: -12px;
+    top:-12px;
+}

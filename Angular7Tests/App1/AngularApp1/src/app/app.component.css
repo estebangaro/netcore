@@ -1,0 +1,9 @@
+.color-blue{
+    color: blue;
+}
+.text-center{
+    text-align: center;
+}
+.shadow-1{
+    box-shadow: 5px 10px #888888;
+}
