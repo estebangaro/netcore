@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\app1"
+    "\\app1",
+    "\\app1\\src"
   ],
+  "SelectedNode": "\\Global settings (C:\\Users\\Desarrollo2\\AppData\\Local\\Microsoft\\VisualStudio\\15.0_9fe3c03f\\OpenFolder)",
   "PreviewInSolutionExplorer": false
 }

@@ -16,11 +16,30 @@ export class buscadorDeEncabezados{
         this.cadena = 0;
     }
     ngOnInit(){
-        $("#buscadordeencabezados").hide();
+        this.HideElement("buscadordeencabezados");
     }
     public Encabezado: Encabezado; // propiedades de visualización de resultados de consulta.
 
     public Open(){
-        $("#buscadordeencabezados").show();
+        this.ShowElement("buscadordeencabezados");
+    }
+
+    public CleanFields(){
+        (<HTMLInputElement>document.getElementById("cad")).value = "";
+        (<HTMLInputElement>document.getElementById("oc")).value = "";
+    }
+
+    HideElement(element: string){
+        document.getElementById(element)
+        .attributes.getNamedItem("style")
+        .value = "display:none;";
+
+        this.CleanFields();
+    }
+
+    public ShowElement(element: string){
+        document.getElementById(element)
+        .attributes.getNamedItem("style")
+        .value = "display:block;";
     }
 }
