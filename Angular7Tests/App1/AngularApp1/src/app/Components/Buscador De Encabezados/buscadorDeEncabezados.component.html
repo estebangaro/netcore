@@ -1,7 +1,10 @@
 
-<div id="buscadordeencabezados" class="fondoPopUp" style="">
+<button (click)="Open()" class="btn btn-primary">
+    Mostrar componente consulta de encabezados
+</button>
+<div id="buscadordeencabezados" class="fondoPopUp" [ngStyle]="{'display': estiloPopup}">
     <div class="contenedorPopUp shadow-1">
-        <img src="assets/cerrar.png" alt="cerrar icono" (click) = "HideElement('buscadordeencabezados')"
+        <img src="assets/cerrar.png" alt="cerrar icono" (click)="HideElement()"
           class="icono-cerrar" id="iconoCerrar" />
         <div class="encabezadoPopUp padding-1em">
             <h4 class="modal-title">Consulta de encabezados</h4>
@@ -11,30 +14,20 @@
                         <form>
                             <div class="form-group">
                               <label for="cad">Cadena:</label>
-                              <input type="text" class="form-control" id="cad">
+                              <input [(ngModel)]="Encabezado.cadena" type="text" 
+                                class="form-control" name="cad" id="cad" />
                             </div>
                             <div class="form-group">
                               <label for="oc">N&uacute;mero de orden de compra:</label>
-                              <input type="text" class="form-control" id="oc">
+                              <input [(ngModel)]="Encabezado.numeOc" type="text" 
+                                class="form-control" name="oc" id="oc" />
                             </div>
-                            <button class="btn btn-primary">Consultar</button>
-                          </form>
-                </div>
-                <div id="DatosForm" class="oculto">
-                        <form>
-                                <div class="form-group">
-                                  <label for="cad">Cadena:</label>
-                                  <input type="text" class="form-control" id="cad">
-                                </div>
-                                <div class="form-group">
-                                  <label for="oc">N&uacute;mero de orden de compra:</label>
-                                  <input type="text" class="form-control" id="oc">
-                                </div>
-                                <div class="form-group">
-                                    <label for="numCli">Nombre de cliente:</label>
-                                    <input type="text" class="form-control" id="numCli">
-                                </div>
-                              </form>
+                            <div class="form-group" [ngStyle]="{'display': estiloData}">
+                              <label for="nomCli">Nombre de cliente:</label>
+                              <input type="text" class="form-control" id="nomCli">
+                            </div>
+                            <button class="btn btn-primary" [ngStyle]="{'display': estiloForm}">Consultar</button>
+                        </form>
                 </div>
         </div>
     </div>

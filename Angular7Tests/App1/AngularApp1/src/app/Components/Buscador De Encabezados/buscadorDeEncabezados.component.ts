@@ -7,39 +7,33 @@ import { Encabezado } from "../../Model/Encabezado";
     selector: "buscador-de-encabezados"
 })
 export class buscadorDeEncabezados{
-    public numOc: string;
-    public cadena: number;
-
+    public estiloPopup: string;
     constructor() { // propiedades de búsqueda.
         this.Encabezado = new Encabezado('', '', '', 0);
-        this.numOc = "";
-        this.cadena = 0;
     }
     ngOnInit(){
-        this.HideElement("buscadordeencabezados");
+        this.HideElement();
     }
     public Encabezado: Encabezado; // propiedades de visualización de resultados de consulta.
+    public estiloForm = 'block';
+    public estiloData = 'none';
 
     public Open(){
-        this.ShowElement("buscadordeencabezados");
+        this.ShowElement();
     }
 
     public CleanFields(){
-        (<HTMLInputElement>document.getElementById("cad")).value = "";
-        (<HTMLInputElement>document.getElementById("oc")).value = "";
+        this.Encabezado.cadena = 0;
+        this.Encabezado.numeOc = "";
     }
 
-    HideElement(element: string){
-        document.getElementById(element)
-        .attributes.getNamedItem("style")
-        .value = "display:none;";
+    public HideElement(){
+        this.estiloPopup = 'none';
 
         this.CleanFields();
     }
 
-    public ShowElement(element: string){
-        document.getElementById(element)
-        .attributes.getNamedItem("style")
-        .value = "display:block;";
+    public ShowElement(){
+        this.estiloPopup = 'block';
     }
 }
