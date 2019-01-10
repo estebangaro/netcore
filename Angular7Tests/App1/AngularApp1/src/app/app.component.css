@@ -7,3 +7,13 @@
 .shadow-1{
     box-shadow: 5px 10px #888888;
 }
+span.selected-menu-item:hover{
+    text-decoration-line: underline;
+    color: blue;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.active{
+    background-color: aquamarine;
+}

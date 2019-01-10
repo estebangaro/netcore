@@ -2,9 +2,10 @@
     <div class="jumbotron shadow-1">
         <h1>{{HeaderValues.Title}}</h1> 
         <p>Componente APP principal</p>
-        <!--<buscador-de-encabezados></buscador-de-encabezados>-->
+        <ul>
+            <li [routerLink]="['/buscadorEncabezados']" [routerLinkActive]="['active']"><span ngClass="selected-menu-item">Buscador de Encabezados</span></li>
+            <li [routerLink]="['/mensaje']" [routerLinkActive]="['active']"><span ngClass="selected-menu-item">Mensaje de Texto</span></li>
+        </ul>
     </div>
-    <!--<msg-text-jumbotron></msg-text-jumbotron>-->
 </div>
-
 <router-outlet></router-outlet>

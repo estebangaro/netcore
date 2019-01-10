@@ -2,6 +2,7 @@
     <div class="jumbotron">
       <h1>Angular 7 Curso Udemy</h1> 
       <p>Hello, World!</p> 
-      <p>{{customMsg}}</p> 
+      <p *ngIf="customMsg">Mensaje 1: {{customMsg}}</p>
+      <p *ngIf="customMsg2">Mensaje 2: {{customMsg2}}</p>
     </div>
   </div>
